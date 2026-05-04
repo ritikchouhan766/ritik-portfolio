@@ -1,5 +1,4 @@
 {
-  "buildCommand": "cd ritik-portfolio && npm install && npm run build",
-  "outputDirectory": "ritik-portfolio/.next",
-  "rootDirectory": "ritik-portfolio"
+  "buildCommand": "npm install && npm run build",
+  "outputDirectory": ".next"
 }
