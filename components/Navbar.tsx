@@ -98,7 +98,7 @@ export default function Navbar() {
           onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.8')}
           onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
         >
-          rc<span style={{ color: '#555' }}>.dev</span>
+          Ritik Chouhan<span style={{ color: '#555' }}></span>
         </a>
 
         {/* Desktop Nav */}

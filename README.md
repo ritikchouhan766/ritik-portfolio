@@ -13,7 +13,7 @@ Python Backend Engineer portfolio built with Next.js 14, Tailwind CSS, and TypeS
 ## Project Structure
 
 ```
-.
+ritik-portfolio/
 ├── app/
 │   ├── globals.css       # Global styles, CSS variables, animation utilities
 │   ├── layout.tsx        # Root layout with SEO metadata
@@ -38,8 +38,7 @@ Python Backend Engineer portfolio built with Next.js 14, Tailwind CSS, and TypeS
 ## Getting Started
 
 ### Prerequisites
-
-- Node.js 18+
+- Node.js 18+ 
 - npm or yarn
 
 ### Local Development
@@ -107,7 +106,6 @@ Add via Vercel Dashboard → Project Settings → Environment Variables
 ### Add Resume PDF
 
 Place your resume at:
-
 ```
 public/Ritik_Chouhan_Resume.pdf
 ```
@@ -138,7 +136,6 @@ In Vercel Dashboard → Project → Settings → Domains → Add your domain.
 - **Headers**: `poweredByHeader: false` removes X-Powered-By
 
 ### Lighthouse Targets
-
 - Performance: 95+
 - Accessibility: 90+
 - SEO: 100
@@ -160,7 +157,6 @@ export const metadata: Metadata = {
 ```
 
 Update `metadataBase` URL once you have a custom domain:
-
 ```typescript
 metadataBase: new URL('https://your-domain.com'),
 ```
