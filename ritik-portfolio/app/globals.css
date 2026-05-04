@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #0a0a0a;
+    --bg-secondary: #111111;
+    --bg-card: #141414;
+    --bg-border: #1e1e1e;
+    --accent: #3b82f6;
+    --accent-dim: #1d4ed8;
+    --accent-glow: rgba(59, 130, 246, 0.12);
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0a0;
+    --text-muted: #555555;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #1e1e1e #0a0a0a;
+  }
+
+  html::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: #1e1e1e;
+    border-radius: 2px;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: 'DM Sans', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.25);
+    color: #f0f0f0;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply font-mono text-xs tracking-[0.2em] uppercase text-[var(--accent)] mb-3;
+  }
+
+  .section-title {
+    @apply font-display text-3xl md:text-4xl font-700 text-[var(--text-primary)] mb-4;
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--bg-border);
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+  }
+
+  .card:hover {
+    border-color: rgba(59, 130, 246, 0.3);
+  }
+
+  .tag {
+    @apply font-mono text-xs px-2.5 py-1 rounded-sm;
+    background: rgba(59, 130, 246, 0.08);
+    border: 1px solid rgba(59, 130, 246, 0.15);
+    color: #93c5fd;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-sm font-sans font-500 text-sm transition-all duration-200;
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .btn-primary:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-5 py-2.5 rounded-sm font-sans font-400 text-sm transition-all duration-200;
+    border: 1px solid var(--bg-border);
+    color: var(--text-secondary);
+  }
+
+  .btn-ghost:hover {
+    border-color: rgba(59, 130, 246, 0.4);
+    color: var(--text-primary);
+  }
+}
+
+/* Fade-up animation utility */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Metric highlight */
+.metric {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+/* Divider line */
+.divider {
+  border: none;
+  border-top: 1px solid var(--bg-border);
+}
